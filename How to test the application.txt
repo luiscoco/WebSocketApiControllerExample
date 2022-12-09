@@ -1,0 +1,15 @@
+The server listens for messages from clients and responds to each message with the same message (echo)
+The server listens for messages on ws://localhost:5000/api/ws and wss://localhost:5001/api/ws\
+The WebSocket instance is wrapped by the WebSocketConnection class that exposes standard WebSocket methods like Receive, Send, Close. 
+The class is separately testable and keeps the websocket logic away from Controller.
+The solution is fully asynchronous and nonblocking.
+Additionally the solution features the AddControllersAsServices approach which means the Controller classes are created in code and not by framework.
+
+0. First of all, download the source code from: https://github.com/nosalan/websocket-api-controller-example 
+Open Visual Studio 2022 and run the API WebSocket application.
+
+1. Go to this URL: https://www.piesocket.com/websocket-tester
+
+2. Enter WebSocket URL (wss://localhost:5001/api/ws) and click on connect button.
+
+3. Type a message and click on send button.
